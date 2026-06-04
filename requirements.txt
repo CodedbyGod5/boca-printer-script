@@ -1,0 +1,4 @@
+# Simple Printer Monitor - Minimal Requirements
+
+# GPIO library (optional - runs in simulation mode if not available)
+gpiozero>=2.0.0

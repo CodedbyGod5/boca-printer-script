@@ -1,0 +1,17 @@
+[Unit]
+Description=Printer Paper Monitor
+After=network.target
+
+[Service]
+Type=simple
+User=%i
+WorkingDirectory=%h/printer-monitor
+ExecStart=/usr/bin/python3 %h/printer-monitor/printer_monitor.py
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=printer-monitor
+
+[Install]
+WantedBy=multi-user.target
